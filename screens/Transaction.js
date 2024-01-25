@@ -155,7 +155,26 @@ export default class TransactionScreen extends Component {
     return transactionType;
   };
 
-  
+  checkStudentEligiblityForBookissue = async studentld =>{
+const studentRef = await db 
+collection("students")
+where("student_id","==",studentld)                                   });
+get()                                                             }
+ver is StudentEligible = "";                                      });
+if (studentRef.docs.length == 0) {                               }
+this.setState({
+  bookld:"",   studentld:""                                                           return is StudentEligible;
+});
+is StudentEligible = false;                                       };
+Alert.alert("o id do estudante nao existe no banco de dados!");
+} else {
+studentRef docs.map(doc=>
+if (doc.data() number_of_books_issued < 2) (
+is StudentEligible true;
+} else { is StudentEligible = false;
+Alert alert("o alumo retirou 2 livros!");
+this.setState({
+bookld:"", studentid:""
 
   //Bp
   checkStudentEligibilityForBookReturn = async (bookId, studentId) => {
